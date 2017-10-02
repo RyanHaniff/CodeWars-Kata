@@ -1,6 +1,8 @@
 package Counting_Power_Sets;
 
 
+import java.math.BigInteger;
+
 public class Powers {
 
     public static void main(String[] args) {
@@ -12,10 +14,11 @@ public class Powers {
 
     //Power sets: 2^n, where n is the number of members (length of the array)
 
-    public static double powers(int[] list) {
+    public static BigInteger powers(int[] list) {
 
+        BigInteger b = new BigInteger("2");
 
-        return Math.pow(2, list.length);
+        return b.pow(list.length);
     }
 
 }
