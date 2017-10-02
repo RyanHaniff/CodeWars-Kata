@@ -17,19 +17,15 @@ public class Arge {
 
     public static int nbYear(int p0, double percent, int aug, int p) {
 
-        int year = 1;
+        int years = 0;
 
-        int value = p0 + (int)(p0 * (percent / 100) + aug);
+        while(p0 < p) {
 
-        for (int i = 0; value < p; i++) {
-
-
-            value += (int)(value * (percent / 100)) + aug;
-            year++;
-
+            p0 += p0 * (percent / 100) + aug;
+            years++;
         }
 
-        return year;
+        return years;
     }
 
 }
