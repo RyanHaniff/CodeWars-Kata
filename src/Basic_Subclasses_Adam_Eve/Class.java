@@ -3,17 +3,14 @@ package Basic_Subclasses_Adam_Eve;
 
 public class Class {
 
-//    public static Human[] create() {
-//        //code
-//
-//        return null;
-//    }
+    public static Human[] create() {
 
-
+        return new Human[]{new Man(), new Woman()};
+    }
 }
 
+class Man extends Human {
+}
 
-//public class Human {
-//
-//
-//}
+class Woman extends Human {
+}
