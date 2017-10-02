@@ -9,14 +9,21 @@ public class StringUtils {
 
     public static String toAlternativeString(String string) {
 
-        String result = "";
-        for (char c : string.toCharArray()) {
-            if (Character.isUpperCase(c)) {
-                result += Character.toLowerCase(c);
+        char[] charArray = string.toCharArray();
+
+        String modifiedString = "";
+
+        for(int i = 0; i < charArray.length; i++) {
+            char ch = charArray[i];
+            if (Character.isUpperCase(ch)) {
+                modifiedString = modifiedString + Character.toLowerCase(ch);
+
             } else {
-                result += Character.toUpperCase(c);
+                modifiedString = modifiedString + Character.toUpperCase(ch);
             }
         }
-        return result;
+
+
+        return modifiedString;
     }
 }
