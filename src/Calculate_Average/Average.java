@@ -12,12 +12,16 @@ public class Average {
 
     public static double find_average(int[] array) {
 
-        int sum = 0;
+        double sum = 0;
 
         for (int i = 0; i < array.length; i++) {
             sum += array[i];
         }
 
         return sum / array.length;
+
+        //this can also be done:
+        //return Arrays.stream(array).average().orElse(0);
+
     }
 }
