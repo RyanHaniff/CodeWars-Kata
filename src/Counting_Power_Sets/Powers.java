@@ -19,6 +19,9 @@ public class Powers {
         BigInteger b = new BigInteger("2");
 
         return b.pow(list.length);
+
+        //Simplifed version:
+        //return BigInteger.valueOf(2).pow(list.length);
     }
 
 }
