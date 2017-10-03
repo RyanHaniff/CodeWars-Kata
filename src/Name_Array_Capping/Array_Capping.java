@@ -1,5 +1,6 @@
 package Name_Array_Capping;
 
+import java.util.Arrays;
 
 public class Array_Capping {
 
@@ -7,31 +8,42 @@ public class Array_Capping {
 
         String[] arr = {"heLLo", "ryan"};
 
-        System.out.println(capMe(arr));
+        String[] str = capMe(arr);
+
+        System.out.println(Arrays.toString(str));
+
+
     }
 
     public static String[] capMe(String[] strings) {
 
+        int j = 0;
+
         StringBuilder sb = new StringBuilder();
-        for (String word : strings) { //looping through string array a = 0 we are at hello
+        String[] str = new String[strings.length];
+        while (j < strings.length) {
+            for (String word : strings) { //looping through string array a = 0 we are at hello
 
-//            char[] charArray = word.toCharArray();
-//            char b = Character.toUpperCase(charArray[0]);
+                for (int i = 0; i < word.length(); i++) {
+                    if (i == 0) {
+                        sb.append(Character.toUpperCase(word.charAt(i)));
+                    } else if (Character.isUpperCase(word.charAt(i))) {
+                        sb.append(Character.toLowerCase(word.charAt(i)));
+                    } else {
+                        sb.append(word.charAt(i));
+                    }
 
-            sb.append(Character.toUpperCase(word.charAt(0)));
-            for (int i = 1; i < word.length(); i++) {
-                if (Character.isUpperCase(word.charAt(i))) {
-                    sb.append(Character.toLowerCase(word.charAt(i)));
-                } else {
-                    sb.append(word.charAt(i));
+
                 }
 
-                strings[i - 1] = sb.toString();
-            }
+                str[j] = sb.toString();
+                sb.setLength(0);
+                j++;
 
+            }
 
         }
 
-        return strings;
+        return str;
     }
 }
