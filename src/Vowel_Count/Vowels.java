@@ -32,10 +32,12 @@ public class Vowels {
                 case 'u':
                     vowelsCount++;
                     break;
-
             }
         }
         return vowelsCount;
+
+        //simplified version
+        //return (int) str.chars().filter(c -> "aeiou".indexOf(c) >= 0).count();
     }
 
 }
