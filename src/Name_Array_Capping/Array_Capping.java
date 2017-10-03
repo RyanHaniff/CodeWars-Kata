@@ -12,7 +12,6 @@ public class Array_Capping {
 
         System.out.println(Arrays.toString(str));
 
-
     }
 
     public static String[] capMe(String[] strings) {
@@ -32,16 +31,11 @@ public class Array_Capping {
                     } else {
                         sb.append(word.charAt(i));
                     }
-
-
                 }
-
                 str[j] = sb.toString();
                 sb.setLength(0);
                 j++;
-
             }
-
         }
 
         return str;
